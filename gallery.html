@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khám Phá Việt Nam | Thư viện</title>
+  <title>Interactive Photo Gallery | Việt Nam</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     <div class="brand">
       <span class="brand-mark" aria-hidden="true">VN</span>
       <div>
-        <h1>Khám Phá Việt Nam</h1>
-        <p>Thiên nhiên • Văn hóa • Ẩm thực</p>
+        <h1>Interactive Photo Gallery</h1>
+        <p>JavaScript DOM Practice</p>
       </div>
     </div>
     <nav aria-label="Điều hướng chính">
@@ -26,23 +26,47 @@
 
   <main id="main-content">
     <section class="page-intro">
-      <p class="eyebrow">PHOTO GRID</p>
-      <h2>Thư viện điểm đến</h2>
-      <p>Trang này sử dụng CSS Grid và có hơn năm hình ảnh. Di chuột hoặc dùng bàn phím để khám phá hiệu ứng trên từng thẻ.</p>
+      <p class="eyebrow">JAVASCRIPT PROJECT</p>
+      <h2>Thư viện ảnh tương tác</h2>
+      <p>Di chuột qua một hình ảnh để cập nhật nội dung và hình nền của vùng xem trước.</p>
     </section>
 
-    <section class="gallery-grid" aria-label="Thư viện ảnh Việt Nam">
-      <figure><img src="images/halong.svg" alt="Vịnh Hạ Long"><figcaption>Vịnh Hạ Long</figcaption></figure>
-      <figure><img src="images/hoian.svg" alt="Phố cổ Hội An với đèn lồng"><figcaption>Hội An</figcaption></figure>
-      <figure><img src="images/sapa.svg" alt="Ruộng bậc thang Sa Pa"><figcaption>Sa Pa</figcaption></figure>
-      <figure><img src="images/danang.svg" alt="Bãi biển Đà Nẵng"><figcaption>Đà Nẵng</figcaption></figure>
-      <figure><img src="images/hanoi.svg" alt="Hồ Gươm và Tháp Rùa tại Hà Nội"><figcaption>Hà Nội</figcaption></figure>
-      <figure><img src="images/mekong.svg" alt="Sông nước miền Tây và thuyền"><figcaption>Miền Tây</figcaption></figure>
+    <section class="interactive-gallery" aria-label="Thư viện ảnh tương tác">
+      <div id="image">Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.</div>
+
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/halong.svg" alt="Vịnh Hạ Long" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Vịnh Hạ Long</figcaption>
+        </figure>
+        <figure>
+          <img src="images/hoian.svg" alt="Phố cổ Hội An với đèn lồng" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Hội An</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sapa.svg" alt="Ruộng bậc thang Sa Pa" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Sa Pa</figcaption>
+        </figure>
+        <figure>
+          <img src="images/danang.svg" alt="Bãi biển Đà Nẵng" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Đà Nẵng</figcaption>
+        </figure>
+        <figure>
+          <img src="images/hanoi.svg" alt="Hồ Gươm và Tháp Rùa tại Hà Nội" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Hà Nội</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mekong.svg" alt="Sông nước miền Tây và thuyền" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()" tabindex="0">
+          <figcaption>Miền Tây</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Bài tập HTML &amp; CSS • Grid gallery với 6 hình ảnh.</p>
+    <p>Bài tập JavaScript • Interactive Photo Gallery • DOM Events</p>
   </footer>
+
+  <script src="gallery.js"></script>
 </body>
 </html>
